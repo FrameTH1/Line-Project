@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* PC */
+  --icon-size-pc: 55px;
+  --icon-gap-pc: 7px;
+  --profile-size-pc : 80px;
+  --profile-gap-pc: 20px;
+  --profile-border-pc : 25px;
+  --enagy_bar_1-width : 235px;
+
+  /* PC Change */
+  --profile-border-coler : white;
+
+  /* Mobile */
+
+  /* Change Color */
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --border-color: black;
+}
+
+/* mobile - tablet */
+@media (max-width: 640px) {
+}
+
+/* pc - L pc */
+@media (min-width: 640px) {
+  #login_btn {
+    width: var(--icon-size-pc);
+    height: var(--icon-size-pc);
+    position: absolute;
+    top: var(--icon-gap-pc);
+    right: var(--icon-gap-pc);
+    cursor: pointer;
+  }
+  #setting_btn {
+    width: var(--icon-size-pc);
+    height: var(--icon-size-pc);
+    position: absolute;
+    top: var(--icon-gap-pc);
+    right: calc((var(--icon-gap-pc) * 2) + var(--icon-size-pc));
+    cursor: pointer;
+  }
+  #profile {
+    width: var(--profile-size-pc);
+    height: var(--profile-size-pc);
+    position: absolute;
+    top: var(--profile-gap-pc);
+    left: var(--profile-gap-pc);;
+    border-radius: 80px;
+  }
+  #bg_profile {
+    width: calc(var(--profile-size-pc) + var(--profile-border-pc));
+    height: calc(var(--profile-size-pc) + var(--profile-border-pc));
+    position: absolute;
+    top: calc(var(--profile-gap-pc) - calc(var(--profile-border-pc)/2));
+    left: calc(var(--profile-gap-pc) - calc(var(--profile-border-pc)/2));
+    z-index: -1;
+  }
+  #bg_1 {
+    width: var(--enagy_bar_1-width);
+    height: calc(var(--profile-size-pc) - (var(--profile-gap-pc) / 1.5));
+    position: absolute;
+    top: calc(var(--profile-gap-pc) / 2.25);
+    left: calc((var(--profile-gap-pc)* 2) + var(--profile-size-pc));
+  }
+  #enagy_bar_1 {
+    width: var(--enagy_bar_1-width);
+    height: auto;
+    position: absolute;
+    top: var(--profile-size-pc) ;
+    left: calc((var(--profile-gap-pc)* 2) + var(--profile-size-pc));
+  }
+}
